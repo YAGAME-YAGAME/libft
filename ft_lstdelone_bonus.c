@@ -12,41 +12,39 @@
 
 #include "libft.h"
 
+void ft_del_node(void *content)
+{
+  
+    if (content == NULL)
+        return ;
+    
+    free(content);
+}
+
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-
+    if (!lst || !del)
+        return ;
+    del(lst->content);
+    free(lst);
+    
 }
 
 // int main()
 // {
+//     t_list *node;
     
-//     char all[4][20] = {"othamne", "zarwal", "karim", "farid"};
-//     char *s = "houdaifa";
-
     
-//     int i = 1;
-//     t_list *node, *new_node;
-//     t_list  *last;
+//     node = ft_lstnew(ft_strdup("othamne zarwal"));
 
-//     node = ft_lstnew(all[0]);
-//     last = node;
-//     while(i < 4)
-//     {
-//         last->next = ft_lstnew(all[i]);
-//         last = last->next;
-//         i++;
-//     }
+//     printf("%s\n", (char *)node->content);
 
-//     new_node = ft_lstnew(s);
-//     last = node;
-//     ft_lstadd_front(&last, new_node);
-//     i = 0;
-//     // last = node;
-//     while(last)
-//     {
-//         printf("%s\n", last->content);
-//         last = last->next;   
-//     }
-//     //printf("%s\n", last->content);
+//     void (*del) (void *);
+
+//     del = ft_del_node;
+
+//     ft_lstdelone(node , del);
+//     printf("%s\n", (char *)node->content);
+
 
 // }
