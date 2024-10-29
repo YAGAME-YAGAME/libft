@@ -1,14 +1,29 @@
 
 #include "libft.h"
 
-int main(void)
-{
 
-    int x = 10;
-    if (x = 5) {
-        printf("X is 5\n");
-    }
-    return 0;
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*temp;
+
+	if (lst == NULL || del == NULL)
+	{
+		return ;
+	}
+	while (*lst != NULL)
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
+	}
+
+    // int x = 10;
+    // if (x = 5) {
+    //     printf("X is 5\n");
+    // }
+    // return 0;
 
     // int a = 8;
     // int b = 7;

@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:38:16 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/28 19:56:34 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/29 16:35:47 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ char	*ft_strdup(const char *s1)
 {
 	char	*buff;
 	size_t	size;
-
+	if (!s1)
+		return NULL;
 	size = ft_strlen(s1);
 	buff = malloc(size + 1);
 	if (!buff)
 		return (NULL);
-	return (ft_memcpy(buff, s1, size));
+	ft_strlcpy(buff, s1, size + 1);
+	return (buff);
 }
 
 // int main(void)
