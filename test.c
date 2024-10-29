@@ -18,7 +18,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free(*lst);
 		*lst = temp;
 	}
-
+}
+int main(void)
+{
     // int x = 10;
     // if (x = 5) {
     //     printf("X is 5\n");
