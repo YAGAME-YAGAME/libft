@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:40:09 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 17:58:01 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 21:03:08 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	count_size(long n)
 	int	size;
 
 	size = 0;
-	if (n < 0)
+	if (n <= 0)
 	{
 		size++;
 		n = -n;
@@ -37,7 +37,6 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	printf("%ld\n", nbr);
 	c = count_size(n);
 	str = malloc(c + 1);
 	if (!str)
@@ -57,7 +56,7 @@ char	*ft_itoa(int n)
 
 // int main(void)
 // {
-//     int n = 2147483647;
+//     long n = 0;
 //     char *str = ft_itoa(n);
 //     printf("%s\n", str);
 // }
