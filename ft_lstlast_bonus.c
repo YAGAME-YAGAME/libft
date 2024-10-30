@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:39:42 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 00:33:36 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/30 19:09:44 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list *last;
-    last = lst;
-    if (!lst)
-        return (NULL);
-    while (last->next != NULL)
-        last = last->next;
-    return (last);
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
 
 // int main()

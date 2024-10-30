@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:23:06 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/28 19:51:37 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:50:55 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 char *ft_strrchr(const char *str, int c)
 {
+    if (!str)
+        return (NULL);
     char *ptr = (char *)str;
 
     while (*ptr!= '\0')

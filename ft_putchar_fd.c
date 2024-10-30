@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:11:44 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/27 17:28:04 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:38:19 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 void ft_putchar_fd(char c, int fd)
 {
-    if(!c || fd < 0)
-        return ;
     write(fd, &c, 1);  
 }
 // int main(void)

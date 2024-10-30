@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:26:07 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/27 13:20:48 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:21:16 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    size_t i;
+    unsigned int i;
     
     i = 0;
     if (!s || !f)
@@ -34,7 +34,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     while(s[i])
     {
         f(i, &s[i]);
-        s++;
+        i++;
     }
     
 }

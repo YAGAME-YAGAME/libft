@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:37:55 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/28 22:37:33 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 19:33:33 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         buff[i] = f(i, s[i]);
         i++;
     }
-
+    buff[i] = '\0';
     return (buff);
 }
 

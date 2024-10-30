@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:57:00 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 17:07:22 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/30 19:23:04 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,18 @@
 
 void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    t_list *nd;
+    t_list *tmp;
     
-    nd = (*lst)->next;
     if (!*lst || !del)
         return ;
-    while (nd)
+    
+    while (*lst)
     {
-        del(nd->content);
-        *lst = nd;
-        nd = (*lst)->next;
+        tmp = (*lst)->next;
+        del((*lst)->content);
+        free(*lst);
+        *lst = tmp;
+
     }
     
 }
