@@ -14,16 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *p;
+	unsigned char	*p;
 
-    p = (unsigned char *)s;
-    while (n--)
-    {
-        if (*p == (unsigned char)c)
-            return (void *)p;
-        p++;
-    }
-    return (NULL);
+	p = (unsigned char *)s;
+	while (n--)
+	{
+		if (*p == (unsigned char)c)
+			return ((void *)p);
+		p++;
+	}
+	return (NULL);
 }
 
 // int main(void)
@@ -34,5 +34,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 //     printf("%p\n", ptr);
 //     printf("%p\n", str);
-//     return 0;
+//     return (0);
 // }

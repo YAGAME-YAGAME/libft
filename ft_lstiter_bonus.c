@@ -16,21 +16,21 @@
 // {
 //     char *con = (char *)content;
 //     ft_memcpy(con, "0x", 2);
-    
+
 // }
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    t_list *node;
+	t_list	*node;
 
-    node = lst;
-    if (!node || !f)
-        return ;
-    while(node)
-    {
-        f(node->content);
-        node = node->next;
-    }
+	node = lst;
+	if (!node || !f)
+		return ;
+	while (node)
+	{
+		f(node->content);
+		node = node->next;
+	}
 }
 
 // int main(void)
@@ -38,7 +38,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 //     void (*add) (void *content);
 
 //     t_list *node1, *node2, *node3, *node4, *header, *last;
-    
+
 //     // create nodes;
 //     node1 = ft_lstnew(strdup("youssef"));
 //     node2 = ft_lstnew(strdup("houdaifa"));
@@ -49,7 +49,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 
 //     header = node1;
 //     last = node1;
-    
+
 //     node1->next = node2;
 //     node2->next = node3;
 //     node3->next = node4;
@@ -59,7 +59,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 //         printf("%s\n", last->content);
 //         last = last->next;
 //     }
-    
+
 //     add = change_content;
 //     ft_lstiter(header, add);
 //     last = node1;
@@ -68,7 +68,5 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 //         printf("%s\n", last->content);
 //         last = last->next;
 //     }
-    
-    
-    
+
 // }

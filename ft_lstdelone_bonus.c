@@ -14,27 +14,25 @@
 
 // void ft_del_node(void *content)
 // {
-  
+
 //     if (content == NULL)
 //         return ;
-    
+
 //     free(content);
 // }
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst || !del)
-        return ;
-    del(lst->content);
-    free(lst);
-    
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
 
 // int main()
 // {
 //     t_list *node;
-    
-    
+
 //     node = ft_lstnew(ft_strdup("othamne zarwal"));
 
 //     printf("%s\n", (char *)node->content);
@@ -45,6 +43,5 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
 
 //     ft_lstdelone(node , del);
 //     printf("%s\n", (char *)node->content);
-
 
 // }

@@ -12,28 +12,27 @@
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int size;
+	int	size;
 
-    size = 0;
-    if (!lst)
-        return (0);
-    while(lst)
-    {
-        size++;
-        lst = lst->next;
-    }
-    return (size);
+	size = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }
 
 // int main()
 // {
-    
+
 //     char all[4][20] = {"othamne", "zarwal", "karim", "farid"};
 //     char *s = "houdaifa";
 
-    
 //     int i = 1;
 //     t_list *node, *new_node, *other;
 //     t_list *first, *last;
@@ -46,7 +45,7 @@ int ft_lstsize(t_list *lst)
 //         last = last->next;
 //         i++;
 //     }
-    
+
 //     new_node = ft_lstnew(s);
 //     other = ft_lstnew("omar");
 //     last = node;
@@ -57,7 +56,7 @@ int ft_lstsize(t_list *lst)
 //     while(last)
 //     {
 //         printf("%s\n", last->content);
-//         last = last->next;  
+//         last = last->next;
 //         i++;
 //     }
 //     printf("%d\n",ft_lstsize(node));

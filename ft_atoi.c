@@ -14,31 +14,31 @@
 
 static int	ft_skip_spaces(char c)
 {
-	return (c == ' ' || c == '\f' || c == '\n' || c == '\r'
-		|| c == '\t' || c == '\v');
+	return (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'
+		|| c == '\v');
 }
 
 int	ft_atoi(const char *str)
 {
-    long res;
-    int q;
+	long	res;
+	int		q;
 
-    res = 0;
-    q = 1;
-    while (ft_skip_spaces(*str))
-        str++;
-    if (*str == '+' || *str == '-')
-    {
-        if (*str == '-')
-            q *= -1;
-        str++;
-    }
-    while (*str >= '0' && *str <= '9')
-    {
-        res = res * 10 + (*str - '0');
-        str++;
-    }
-    return (res *= q);
+	res = 0;
+	q = 1;
+	while (ft_skip_spaces(*str))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			q *= -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + (*str - '0');
+		str++;
+	}
+	return (res *= q);
 }
 
 // int main(void)
@@ -46,5 +46,5 @@ int	ft_atoi(const char *str)
 //     char str[] = "   2147483647";
 //     printf("%d\n", ft_atoi(str));
 //     printf("%d\n", atoi(str));
-//     return 0;
+//     return (0);
 // }

@@ -12,66 +12,64 @@
 
 #include "libft.h"
 
-static int count_word(const char *str , char sep)
+static int	count_word(const char *str, char sep)
 {
-    int c;
-    int i;
+	int	c;
+	int	i;
 
-    i = 0;
-    c = 0;
-    while(str[i])
-    {
-        while(str[i] == sep && str[i])
-            i++;
-        if (str[i] == '\0')
-            break;
-        while (str[i] != sep && str[i])
-            i++;
-        c++;
-    
-    }
-    return (c);
+	i = 0;
+	c = 0;
+	while (str[i])
+	{
+		while (str[i] == sep && str[i])
+			i++;
+		if (str[i] == '\0')
+			break ;
+		while (str[i] != sep && str[i])
+			i++;
+		c++;
+	}
+	return (c);
 }
 
-static void ft_alloc(char **buff,char *s, int wc, char c)
+static void	ft_alloc(char **buff, char *s, int wc, char c)
 {
-    int j;
-    int i;
-    int start;
-    int k;
-    
-    i = 0;
-    start = 0;
-    j = 0;
-    while(j < wc)
-    {
-        while(s[i] == c && s[i])
-            i++;
-        start = i;
-        while(s[i] != c && s[i])
-            i++;
-        k = 0;
-        buff[j] = malloc((i - start) + 1);
-        while(start < i)
-            buff[j][k++] = s[start++];
-        buff[j][k] = '\0';
-        j++;
-    }
-    buff[j] = NULL;
+	int	j;
+	int	i;
+	int	start;
+	int	k;
+
+	i = 0;
+	start = 0;
+	j = 0;
+	while (j < wc)
+	{
+		while (s[i] == c && s[i])
+			i++;
+		start = i;
+		while (s[i] != c && s[i])
+			i++;
+		k = 0;
+		buff[j] = malloc((i - start) + 1);
+		while (start < i)
+			buff[j][k++] = s[start++];
+		buff[j][k] = '\0';
+		j++;
+	}
+	buff[j] = NULL;
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    int    wc;
-    char **buff;
-    
-    wc = count_word(s, c);
-    buff = malloc((wc + 1) * sizeof(char *));
-    if(!buff)
-        return (NULL);
-    
-    ft_alloc(buff, (char *)s, wc, c);
-    return (buff);
+	int		wc;
+	char	**buff;
+
+	wc = count_word(s, c);
+	buff = malloc((wc + 1) * sizeof(char *));
+	if (!buff)
+		return (NULL);
+	ft_alloc(buff, (char *)s, wc, c);
+	return (buff);
 }
 
 // int    main(void)
@@ -79,7 +77,7 @@ char **ft_split(char const *s, char c)
 //     char *s = "otmane hafid karim yassine abderrahim adil amina";
 //     char c = ' ';
 //     char **res;
-    
+
 //     res = ft_split(s, c);
 
 //     int i = 0;

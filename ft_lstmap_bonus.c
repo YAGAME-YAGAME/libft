@@ -27,7 +27,6 @@
 //     return (content);
 // }
 
-
 // void    put_list(t_list *node)
 // {
 //     if (!node)
@@ -44,34 +43,30 @@
 //     free(content);
 // }
 
-
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list *newlist;
-    t_list *node;
-    void *s;
-    
-    newlist = (NULL);
-    
-    if (!lst || !f || !del)
-        return (NULL);
-    
-    while(lst)
-    {
-        s = f(lst->content);
-        node = ft_lstnew(s);
-        if (!node)
-        {
-            del(node->content);
-            ft_lstclear(&newlist, del);
-               return (NULL);
-        }
-        ft_lstadd_back(&newlist, node);
-        lst = lst->next;
-    }
-    return (newlist);
-}
+	t_list	*newlist;
+	t_list	*node;
+	void	*s;
 
+	newlist = (NULL);
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
+	{
+		s = f(lst->content);
+		node = ft_lstnew(s);
+		if (!node)
+		{
+			del(node->content);
+			ft_lstclear(&newlist, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlist, node);
+		lst = lst->next;
+	}
+	return (newlist);
+}
 
 // int main(void)
 // {
@@ -84,7 +79,6 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 //     f = edit;
 //     del = del_node;
-    
 
 //     node1 = ft_lstnew(ft_strdup("othmane"));
 //     header = node1;
@@ -100,6 +94,6 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //     new_list = ft_lstmap(header, f, del);
 
 //     put_list(new_list);
-    
+
 //     put_list(header);
 // }
