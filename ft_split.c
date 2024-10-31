@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:13:57 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 00:03:13 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/31 14:48:25 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,17 @@ static int	count_word(const char *str, char sep)
 	return (c);
 }
 
+static char	**alloc_free(char **bf, int index)
+{
+	while (index > 0)
+	{
+		free(bf[index]);
+		index--;
+	}
+	free(bf);
+	return (NULL);
+}
+
 static void	ft_alloc(char **buff, char *s, int wc, char c)
 {
 	int	j;
@@ -51,6 +62,8 @@ static void	ft_alloc(char **buff, char *s, int wc, char c)
 			i++;
 		k = 0;
 		buff[j] = malloc((i - start) + 1);
+		if (!buff)
+			alloc_free(buff, j);
 		while (start < i)
 			buff[j][k++] = s[start++];
 		buff[j][k] = '\0';
