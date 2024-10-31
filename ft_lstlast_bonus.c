@@ -25,11 +25,10 @@ t_list	*ft_lstlast(t_list *lst)
 
 // int main()
 // {
-    
+
 //     char all[4][20] = {"othamne", "zarwal", "karim", "farid"};
 //     char *s = "houdaifa";
 
-    
 //     int i = 1;
 //     t_list *node, *new_node, *other;
 //     t_list *first, *last;
@@ -42,25 +41,20 @@ t_list	*ft_lstlast(t_list *lst)
 //         last = last->next;
 //         i++;
 //     }
-    
+
 //     new_node = ft_lstnew(s);
 //     other = ft_lstnew("omar");
 //     last = node;
 //     ft_lstadd_front(&last, new_node);
 
-    
-    
 //     // printf("%d\n",ft_lstsize(node));
 //     // while(last)
 //     // {
 //     //     printf("%s\n", (char *)last->content);
-//     //     last = last->next;  
+//     //     last = last->next;
 //     // }
-    
-    
-    
-//     t_list *ls =  ft_lstlast(last);    
-//     printf("%s\n", (char *)ls->content);
 
+//     t_list *ls =  ft_lstlast(last);
+//     printf("%s\n", (char *)ls->content);
 
 // }

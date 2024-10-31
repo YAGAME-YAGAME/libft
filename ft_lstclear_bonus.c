@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:57:00 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 19:23:04 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:00:01 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,38 @@
 
 // static void ft_del_node(void *content)
 // {
-  
+
 //     if (content == NULL)
 //         return ;
-    
+
 //     free(content);
 // }
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *tmp;
-    
-    if (!*lst || !del)
-        return ;
-    
-    while (*lst)
-    {
-        tmp = (*lst)->next;
-        del((*lst)->content);
-        free(*lst);
-        *lst = tmp;
+	t_list	*tmp;
 
-    }
-    
+	if (!*lst || !del)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = tmp;
+	}
 }
 
 // int main(void)
 // {
 //     t_list *node, *header , *last_node, *sw;
 //     int i = 0;
-    
-//     char name[5][20] = {"othmane" , "youssef", "aymane", "houdaifa", "abderafia"};
+
+//     char name[5][20] = {"othmane" , "youssef", "aymane", "houdaifa",
+//	"abderafia"};
 
 //     header = NULL;
-    
+
 //     // node = ft_lstnew(ft_strdup(name[0]));
 //     while(i < 5)
 //     {
@@ -56,7 +54,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 //             node = ft_lstnew(ft_strdup(name[i]));
 //             header = node;
 //         }
-//         else 
+//         else
 //         {
 //             ft_lstadd_back(&header, ft_lstnew(ft_strdup(name[i])));
 //         }
@@ -71,12 +69,12 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 //         sw = sw->next;
 //         i++;
 //     }
-    
+
 //     void (*del) (void *);
 
 //     del = ft_del_node;
-    
+
 //     ft_lstclear(&header, del);
 //     sw = header->next;
-//     printf("%p\n", sw); 
+//     printf("%p\n", sw);
 // }

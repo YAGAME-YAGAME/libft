@@ -11,17 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 //#include <fcntl.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);  
+	write(fd, &c, 1);
 }
 // int main(void)
 // {
 //     int ft = open("example.txt", O_WRONLY | O_CREAT);
 //     ft_putchar_fd('h', ft);
 //     printf("%d\n", ft);
-    
+
 //     close(ft);
 // }
