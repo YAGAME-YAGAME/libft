@@ -32,7 +32,7 @@ $(NAME): $(OBJ)
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus:  $(OBJ_BONUS) 
+bonus:  $(OBJ_BONUS)
 	$(AR) $(NAME)  $(OBJ_BONUS)
 
 

@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:13:57 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 14:48:25 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/31 21:26:06 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	**ft_split(char const *s, char c)
 	int		wc;
 	char	**buff;
 
+	if (!s)
+		return (NULL);
 	wc = count_word(s, c);
 	buff = malloc((wc + 1) * sizeof(char *));
 	if (!buff)
@@ -88,10 +90,10 @@ char	**ft_split(char const *s, char c)
 // int    main(void)
 // {
 //     char *s = "otmane hafid karim yassine abderrahim adil amina";
-//     char c = ' ';
+//     char c = 0;
 //     char **res;
 
-//     res = ft_split(s, c);
+//     res = ft_split("", c);
 
 //     int i = 0;
 //     while(i < count_word(s, c))
