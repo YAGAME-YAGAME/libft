@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:23:06 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 17:50:55 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:07:45 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 char *ft_strrchr(const char *str, int c)
 {
-    if (!str)
-        return (NULL);
+    
     char *ptr = (char *)str;
-
-    while (*ptr!= '\0')
+    
+    while (*ptr != '\0')
         ptr++;
-    while (ptr >= str && *ptr!= (char)c)
+
+    while (ptr >= str && *ptr != (char)c)
         ptr--;
     if (*ptr == (char)c)
         return (ptr);
@@ -30,12 +30,12 @@ char *ft_strrchr(const char *str, int c)
 
 // int main(void)
 // {
-//     char str[] = "Hello, World!";
-//     char c = 'o';
-//     char *ptr = strrchr(str, c);
+//     char *str = "teste";
+    
+//     char *ptr = strrchr(str, 120);
 
-//     printf("%p\n", ptr);
-//     printf("%p\n", str);
+//     printf("%s\n", ptr);
+//     printf("%s\n", strrchr(str, 120));
 
 //     return (0);
 // }

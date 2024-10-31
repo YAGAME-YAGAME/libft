@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:06:04 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 16:37:01 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:21:59 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     t_list *newlist;
     t_list *node;
     void *s;
+    
     newlist = (NULL);
     
     if (!lst || !f || !del)
@@ -57,13 +58,13 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     
     while(lst)
     {
-        s = ft_strdup((char *)lst->content);
-        f(s);
+        s = f(lst->content);
         node = ft_lstnew(s);
         if (!node)
         {
             del(node->content);
-            free(node);
+            ft_lstclear(&newlist, del);
+               return (NULL);
         }
         ft_lstadd_back(&newlist, node);
         lst = lst->next;

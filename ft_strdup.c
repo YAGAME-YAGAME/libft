@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:38:16 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 16:35:47 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:08:39 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*buff;
 	size_t	size;
-	if (!s1)
-		return NULL;
+
 	size = ft_strlen(s1);
 	buff = malloc(size + 1);
 	if (!buff)
@@ -28,7 +27,7 @@ char	*ft_strdup(const char *s1)
 
 // int main(void)
 // {
-//     char *s = "othmane zarwal yassine";
+//     char *s = NULL;
 //     char *res;
 //     res = ft_strdup(s);
 //     printf("%s\n", res);

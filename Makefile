@@ -29,8 +29,13 @@ all: $(NAME)
 $(NAME): $(OBJ) 
 	$(AR) $(NAME) $(OBJ) 
 
+# .o: .c $(HEADER)
+# 	$(CC) $(CFLAGS) -C $< -o $@
+
 bonus: $(OBJ) $(OBJ_BONUS)
 	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
+
+
 clean: 
 	$(RM) $(OBJ) $(OBJ_BONUS)
 
