@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:41:28 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/01 14:38:30 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:42:50 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,35 @@ static int	ft_skip_spaces(char c)
 
 int	ft_atoi(const char *str)
 {
-	long	res;
-	int		q;
+	unsigned long long	res;
+	int					q;
+	int					i;
 
+	i = 0;
 	res = 0;
 	q = 1;
-	while (ft_skip_spaces(*str))
-		str++;
-	if (*str == '+' || *str == '-')
+	while (ft_skip_spaces(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			q *= -1;
-		str++;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (*str - '0');
-		str++;
+		if (res > 9223372036854775807 && q == 1)
+			return (-1);
+		if (res > 9223372036854775807 && q == -1)
+			return (0);
+		res = res * 10 + (str[i++] - '0');
 	}
 	return (res *= q);
 }
 
 // int main(void)
 // {
-//     char str[] = "   -2147483650";
+//     char str[] = " -922337203685475575809";
 //     printf("%d\n", ft_atoi(str));
 //     printf("%d\n", atoi(str));
 //     return (0);

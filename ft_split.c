@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:13:57 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/01 14:30:20 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:45:39 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ static char	**alloc_free(char **bf, int index)
 
 static int	skip(char *s, int *index, char sep)
 {
-	int start;
-	int i = *index;
+	int	start;
+	int	i;
 
+	i = *index;
 	start = 0;
 	while (s[i] && s[i] == sep)
 		i++;
@@ -79,10 +80,7 @@ static void	*ft_alloc(char **buff, char *s, int wc, char c)
 		if (buff)
 			buff[j] = malloc((i - start) + 1);
 		if (!buff[j])
-		{
-			alloc_free(buff, j);
-			return (NULL);
-		}
+			return (alloc_free(buff, j));
 		while (start < i)
 			buff[j][k++] = s[start++];
 		buff[j][k] = '\0';
@@ -122,7 +120,6 @@ char	**ft_split(char const *s, char c)
 //         printf("%s\n", res[i]);
 //         i++;
 //     }
-
 
 //     return (0);
 // }
