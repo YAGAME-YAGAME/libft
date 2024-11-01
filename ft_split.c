@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:13:57 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 21:26:06 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:30:20 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,35 @@ static int	count_word(const char *str, char sep)
 
 static char	**alloc_free(char **bf, int index)
 {
-	while (index > 0)
+	int	i;
+
+	i = 0;
+	while (i <= index)
 	{
-		free(bf[index]);
-		index--;
+		free(bf[i]);
+		bf[i] = NULL;
+		i++;
 	}
 	free(bf);
 	return (NULL);
 }
 
-static void	ft_alloc(char **buff, char *s, int wc, char c)
+static int	skip(char *s, int *index, char sep)
+{
+	int start;
+	int i = *index;
+
+	start = 0;
+	while (s[i] && s[i] == sep)
+		i++;
+	start = i;
+	while (s[i] && s[i] != sep)
+		i++;
+	*index = i;
+	return (start);
+}
+
+static void	*ft_alloc(char **buff, char *s, int wc, char c)
 {
 	int	j;
 	int	i;
@@ -55,21 +74,22 @@ static void	ft_alloc(char **buff, char *s, int wc, char c)
 	j = 0;
 	while (j < wc)
 	{
-		while (s[i] == c && s[i])
-			i++;
-		start = i;
-		while (s[i] != c && s[i])
-			i++;
+		start = skip(s, &i, c);
 		k = 0;
-		buff[j] = malloc((i - start) + 1);
-		if (!buff)
+		if (buff)
+			buff[j] = malloc((i - start) + 1);
+		if (!buff[j])
+		{
 			alloc_free(buff, j);
+			return (NULL);
+		}
 		while (start < i)
 			buff[j][k++] = s[start++];
 		buff[j][k] = '\0';
 		j++;
 	}
 	buff[j] = NULL;
+	return (buff);
 }
 
 char	**ft_split(char const *s, char c)
@@ -82,18 +102,19 @@ char	**ft_split(char const *s, char c)
 	wc = count_word(s, c);
 	buff = malloc((wc + 1) * sizeof(char *));
 	if (!buff)
+	{
 		return (NULL);
-	ft_alloc(buff, (char *)s, wc, c);
-	return (buff);
+	}
+	return (ft_alloc(buff, (char *)s, wc, c));
 }
 
 // int    main(void)
 // {
-//     char *s = "otmane hafid karim yassine abderrahim adil amina";
-//     char c = 0;
+//     char *s = "hello ldjf klfj";
+//     char c = ' ';
 //     char **res;
 
-//     res = ft_split("", c);
+//     res = ft_split(s, c);
 
 //     int i = 0;
 //     while(i < count_word(s, c))
@@ -101,5 +122,7 @@ char	**ft_split(char const *s, char c)
 //         printf("%s\n", res[i]);
 //         i++;
 //     }
+
+
 //     return (0);
 // }

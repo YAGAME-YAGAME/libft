@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:40:09 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 21:03:08 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/01 14:49:22 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ char	*ft_itoa(int n)
 
 // int main(void)
 // {
-//     long n = 0;
+// 	int n = 2147483648;
 //     char *str = ft_itoa(n);
 //     printf("%s\n", str);
+//     printf("%d\n", n);
 // }
