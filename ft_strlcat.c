@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:40:24 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/24 16:10:49 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:52 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
-// int main(void)
-// {
-//     char dst[10] = "Hello, ";
-//     char src[] = "World!";
-//     size_t size = 10;
-
-//     ft_strlcat(dst, src, size);
-//     printf("%s\n", dst); // Outputs: Hello, World!
-//     return (0);
-// }

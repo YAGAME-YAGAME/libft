@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:23:06 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 12:07:58 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:57:27 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return ((char *)p);
 }
-
-// int main(void)
-// {
-//     char *str = "teste";
-
-//     char *ptr = strrchr(str, 120);
-
-//     printf("%s\n", ptr);
-//     printf("%s\n", strrchr(str, 120));
-
-//     return (0);
-// }

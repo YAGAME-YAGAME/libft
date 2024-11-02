@@ -6,9 +6,11 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:40:20 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 13:07:12 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:51:44 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

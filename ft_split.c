@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:13:57 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/01 16:45:39 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:58:24 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,21 +105,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (ft_alloc(buff, (char *)s, wc, c));
 }
-
-// int    main(void)
-// {
-//     char *s = "hello ldjf klfj";
-//     char c = ' ';
-//     char **res;
-
-//     res = ft_split(s, c);
-
-//     int i = 0;
-//     while(i < count_word(s, c))
-//     {
-//         printf("%s\n", res[i]);
-//         i++;
-//     }
-
-//     return (0);
-// }

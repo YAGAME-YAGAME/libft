@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 12:40:59 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 20:49:39 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:57:24 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	const char *str = "lorem ipsum dolor sit amet";
-// 	const char *to = "sit";
-// 	printf("%s\n", ft_strnstr(str, to, 0));
-// 	printf("%s\n", strnstr(str, to, 0));
-// }

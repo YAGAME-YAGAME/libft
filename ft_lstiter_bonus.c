@@ -6,18 +6,11 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:52:06 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 18:48:15 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:55:27 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void change_content(void *content)
-// {
-//     char *con = (char *)content;
-//     ft_memcpy(con, "0x", 2);
-
-// }
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

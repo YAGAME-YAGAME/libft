@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:39:59 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 14:53:33 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:55:43 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-
-// int main(void)
-// {
-//     char *value = "othmane";
-
-//     t_list *node;
-//     node = ft_lstnew((void*)value);
-//     printf("%s\n", node->content);
-
-// }

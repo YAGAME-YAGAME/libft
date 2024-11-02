@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:31:19 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/27 21:10:44 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:19 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-
-// int main(void)
-// {
-//     int fd = open("example.txt", O_WRONLY);
-//     ft_putnbr_fd(-214748, fd);
-
-//     close(fd);
-
-// }

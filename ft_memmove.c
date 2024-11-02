@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 09:20:46 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/29 20:48:10 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:06 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, i);
 	return ((void *)p);
 }
-
-// int main(void)
-// {
-//     {
-// 	char	src[11] = "Youssefhey";
-
-// 	ft_memmove(src, src, 6);
-//     // memmove(src, src, 6);
-//     // printf("%s", src);
-//     // printf("\n");
-// 	//memcpy(src + 2, src, 5);
-// 	//printf("%s", src);
-// }
-// }

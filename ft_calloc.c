@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:02:00 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 19:48:37 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:54:38 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(buff, count * size);
 	return (buff);
 }
-
-// int main(void)
-// {
-//     char *bf;
-//     int i;
-
-//     i = 0;
-//     bf = ft_calloc(10, sizeof(char));
-
-//     while ( i < 10)
-//     {
-//         printf("%d\n", bf[i]);
-//         i++;
-//     }
-//     return (0);
-// }

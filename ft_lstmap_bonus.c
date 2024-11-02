@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:06:04 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/01 11:51:07 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:55:39 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,36 +65,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlist);
 }
-
-// int main(void)
-// {
-//     t_list *header, *lst;
-//     t_list *new_list;
-//     t_list *node1, *node2, *node3, *node4;
-
-//     void *(*f) (void *);
-//     void  (*del) (void *);
-
-//     f = edit;
-//     del = del_node;
-
-//     node1 = ft_lstnew(ft_strdup("othmane"));
-//     header = node1;
-
-//     ft_lstadd_back(&header, ft_lstnew(ft_strdup("youssef")));
-//     ft_lstadd_back(&header, ft_lstnew(ft_strdup("houdaifa")));
-//     ft_lstadd_back(&header, ft_lstnew(ft_strdup("hassan")));
-//     ft_lstadd_back(&header, ft_lstnew(ft_strdup("otmane")));
-//     ft_lstadd_back(&header, ft_lstnew(ft_strdup("mouad")));
-
-//     printf("\n============================================\n\n");
-//     put_list(header);
-//     printf("\n============================================\n\n");
-//     new_list = ft_lstmap(header, f, del);
-
-//     put_list(new_list);
-
-//     printf("\n============================================\n\n");
-
-//     put_list(header);
-// }

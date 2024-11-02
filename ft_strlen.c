@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 19:41:16 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/27 21:36:39 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:57:02 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// int main(void)
-// {
-//     char s[]= "fjdkjfkld";
-//     printf("%zu\n", ft_strlen(s));
-// }

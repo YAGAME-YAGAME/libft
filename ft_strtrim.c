@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:22:31 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 13:13:38 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:58:31 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(buff, s1, len + 1);
 	return (buff);
 }
-
-// int main(void)
-// {
-// char *str = "\t   \n\n\n  \n\n\t    Hello \t
-// Please\n Trim me !\t\t\t\n  \t\t\t\t  ";
-// char *set = "Hello \t  Please\n Trim me !";
-// char *res = ft_strtrim((const char *)str, (const char *)set);
-// printf("%s\n", res);
-// return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 09:11:14 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/30 17:44:34 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:58:09 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// int main(void)
-// {
-//     {
-// 	char	src[11] = "Youssefhey";
-
-// 	ft_memcpy(src, src, 6);
-//     // memmove(src, src, 6);
-//     // printf("%s", src);
-//     // printf("\n");
-// 	//memcpy(src + 2, src, 5);
-// 	//printf("%s", src);
-// }
-// }

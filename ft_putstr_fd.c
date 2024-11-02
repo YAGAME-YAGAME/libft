@@ -6,13 +6,11 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 16:44:01 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/27 17:35:26 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:24 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -24,11 +22,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-
-// int main(void)
-// {
-//     int fd = open("example.txt", O_WRONLY);
-
-//     ft_putstr_fd("kjdkjfkdslfj", fd);
-//     close(fd);
-// }

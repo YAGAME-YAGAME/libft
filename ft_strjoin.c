@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:02:13 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/28 19:53:45 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:48 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(buff, s2, size);
 	return (buff);
 }
-
-// int main(void)
-// {
-//     char *s1 = "othmane";
-//     char *s2 = "hassan";
-
-//     char *res = ft_strjoin((const char *)s1, (const char *)s2);
-
-//     printf("%s\n", res);
-//     return (0);
-// }

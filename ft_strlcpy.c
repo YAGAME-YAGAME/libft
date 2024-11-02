@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:25:17 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/28 19:50:50 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 10:56:59 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-// int main(void)
-// {
-//     char src[] = "Hello";
-//     char dst[5];
-
-//     printf("%zu\n",  ft_strlcpy(dst, src, 0)); // Outputs: Hello, Wor
-//     return (0);
-// }
