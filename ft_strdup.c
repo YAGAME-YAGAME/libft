@@ -6,11 +6,12 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:38:16 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/10/31 10:08:39 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 09:02:12 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -27,6 +28,7 @@ char	*ft_strdup(const char *s1)
 
 // int main(void)
 // {
+// 	write(1, ft_strdup("hello"), 5);
 //     char *s = NULL;
 //     char *res;
 //     res = ft_strdup(s);
