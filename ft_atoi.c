@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:41:28 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/02 11:07:04 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:57:37 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,11 @@ int	ft_atoi(const char *str)
 	}
 	return (res *= q);
 }
+// #include <stdio.h>
+// int main(void)
+// {
+//     char str[] = " 922337203685475575809";
+//     printf("%d\n", ft_atoi(str));
+//     printf("%d\n", atoi(str));
+//     return (0);
+// }

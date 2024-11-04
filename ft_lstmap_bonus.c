@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:06:04 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/02 10:55:39 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:41:49 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*s;
 
 	newlist = NULL;
+	if (!f || !del)
+		return (newlist);
 	while (lst)
 	{
 		s = f(lst->content);

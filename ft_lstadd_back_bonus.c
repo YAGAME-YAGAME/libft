@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 00:37:52 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/02 10:54:58 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:36:20 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!new)
+	if (!lst)
 		return ;
 	if (!*lst)
 	{
